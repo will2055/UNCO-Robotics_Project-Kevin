@@ -27,22 +27,22 @@ def motor_forward():
         s.write( chr(0xAA) + chr(0x09) + chr(0x0C) + chr(0x40))
 
 def motor_reverse():
-	#M0 Left Side
+	#M0 Right Side
 	s.write( chr(0xAA) + chr(0x09) + chr(0x08) + chr(0x40))
-	#M1 Right Side
+	#M1 Left Side
 	s.write( chr(0xAA) + chr(0x09) + chr(0x0E) + chr(0x40))
 	print(1)
 def right_turn():
-	#M0 Left Side
-	s.write( chr(0xAA) + chr(0x09) + chr(0x0A) + chr(0x40))
-	#M1 Right Side
-	s.write( chr(0xAA) + chr(0x09) + chr(0x0E) + chr(0x40))
+	#M0 Right Side
+	s.write( chr(0xAA) + chr(0x09) + chr(0x08) + chr(0x40))
+	#M1 Left Side
+	s.write( chr(0xAA) + chr(0x09) + chr(0x0C) + chr(0x40))
 	print(2)
 def left_turn():
-	#M0 Left Side
-	s.write( chr(0xAA) + chr(0x09) + chr(0x08) + chr(0x40))
-	#M1 Right Side
-	s.write( chr(0xAA) + chr(0x09) + chr(0x0C) + chr(0x40))
+	#M0 Right Side
+	s.write( chr(0xAA) + chr(0x09) + chr(0x0A) + chr(0x40))
+	#M1 Left Side
+	s.write( chr(0xAA) + chr(0x09) + chr(0x0E) + chr(0x40))
 	print(3)
 def motor_stop():
 	s.write( chr(0xAA) + chr(0x09) + chr(0x0A) + chr(0x00))
