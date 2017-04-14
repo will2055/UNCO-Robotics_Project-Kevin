@@ -67,12 +67,12 @@ def drive():
 	    if(leftSensor>=15000):
 	        #Stop, Reverse, turn right, drive
 	        motor_stop()
-			time.sleep(.5)
-			motor_reverse()
-			time.sleep(.6)
-			right_turn()
-			time.sleep(.6)
-			motor_forward()
+	        time.sleep(.5)
+	        motor_reverse()
+	        time.sleep(.6)
+	        right_turn()
+	        time.sleep(.6)
+	        motor_forward()
 	    if(midSensor>=15000):
 	        #Stop, Reverse, turn right, drive 
 			motor_stop()
@@ -85,15 +85,15 @@ def drive():
 	    if(rightSensor>=15000):
 	        #Stop, Reverse, turn left, drive
 	        motor_stop()
-			time.sleep(.5)
-			motor_reverse()
-			time.sleep(.6)
-			left_turn()
-			time.sleep(.6)
-			motor_forward()
+	        time.sleep(.5)
+	        motor_reverse()
+	        time.sleep(.6)
+	        left_turn()
+	        time.sleep(.6)
+	        motor_forward()
 	    if(bottomSensor>=17000):
-	        #Stop, Reverse, turn right, drive
-	        motor_stop()
+			#Stop, Reverse, turn right, drive
+			motor_stop()
 			time.sleep(.5)
 			motor_reverse()
 			time.sleep(.6)
@@ -106,9 +106,9 @@ def beacon_search():
 	heading=ser.readline();
 	#Math to reposition the rover with the 
 	
-def turn( int ro_time):
+def turn(turn_time):
 	right_turn()
-	sleep(ro_time)	
+	sleep(turn_time)	
 	
 adc = Adafruit_ADS1x15.ADS1115()
 GAIN = 1
